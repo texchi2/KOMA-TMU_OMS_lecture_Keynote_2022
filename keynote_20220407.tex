@@ -57,6 +57,25 @@ parskip=half-, % Paragraphs separated by half a line
 %\PassOptionsToPackage{comma,authoryear,square}{natbib}
 
 \usepackage{wrapfig} % for wrapfigure, text wrapping figure
+\newenvironment{WrapText1}[3][r]
+{\wrapfigure[#2]{#1}{#3}}
+{\endwrapfigure}
+\newenvironment{WrapText2}[3][l]
+{\wrapfigure[#2]{#1}{#3}}
+{\endwrapfigure}
+\newcommand{\wrapr}[6]{
+\begin{minipage}{\linewidth}\mbox{}\\
+\vspace{#1}
+\begin{WrapText1}{#2}{#3}
+\vspace{#4}#5\end{WrapText1}#6
+\end{minipage}}
+
+\newcommand{\wrapl}[6]{
+\begin{minipage}{\linewidth}\mbox{}\\
+\vspace{#1}
+\begin{WrapText2}{#2}{#3}
+\vspace{#4}#5\end{WrapText2}#6
+\end{minipage}}
 
 \usepackage{todonotes}
 
@@ -686,7 +705,7 @@ Seldin periosteal elevator\\
 
 \clearpage
 %%
-\begin{minipage}[c]{0.65\linewidth}
+\begin{minipage}[c]{0.6\linewidth}
 
 \begin{outline}
 \1 biopsy (BYE-op-see = small tissue incision)
@@ -705,12 +724,13 @@ Seldin periosteal elevator\\
         \3 melanoma (mel-ah-NO-mah)
 \end{outline}
 \end{minipage}
-\begin{minipage}[c]{0.35\linewidth}
+\begin{minipage}[c]{0.4\linewidth}
 
     \begin{tikzpicture}
-    \node[anchor=south west,inner sep=0] (image) at (0.0,0) {\includegraphics[width=8.0cm]{Biopsy.pdf}};
-    \node[anchor=south west,inner sep=0] (image) at (0.5 
-    ,-1.7) {\includegraphics[width=1.0cm]{no10.png}};
+    \node[anchor=south west,inner sep=0] (image) at (0
+    ,2.4) {\includegraphics[width=1.2cm]{no10.png}};
+    \node[anchor=south west,inner sep=0] (image) at (0,-1.4) {\includegraphics[width=7.0cm]{Biopsy.pdf}};
+
     \end{tikzpicture}
 \end{minipage}
 
@@ -719,6 +739,42 @@ Seldin periosteal elevator\\
 %%
 
 \subsection{Procedures Involved in Minor Bone Surgery}
+
+%      \begin{wrapfigure}[10]{r}{0.3\textwidth}
+%      \includegraphics[width=6.5cm]{torus.png}
+%      \end{wrapfigure}
+
+% https://tex.stackexchange.com/questions/59101/will-it-ever-be-possible-to-use-wrapfig-with-an-enumerate-or-itemize-environment
+% wrapl or wrapr{vertical adjustment of text}{number of lines}{horizontal space needed for the image}{vertical adjustment of image}{IMAGE}{TEXT}
+% - is up, + is down
+
+\wrapr{-10mm}{7}{6cm}{+16mm}
+{\includegraphics[width=6cm]{torus.png}}
+{% text
+\begin{outline}
+\1 osteoplasty = OSS-tee-oh-plas-tee = forming or recontouring bones)
+\1 alveolectomy (al-vee-oh-LECK-toe-mee)
+\1 bone cutting for
+%\end{outline}
+%\begin{outline}
+    \2 exostosis (ecks-ahs-TOH-sis = bony outgrowth)
+    \2 torus (TORE-us = rounded elevation)
+        \3 torus mandibularis (man-dib-u- LAIR-iss)
+        \3 torus palatinus (pal-ah-TEEN-us
+\1 enucleation or decompression
+    \2 cysts (SISTs = abnormal, closed-walled sac present in bone)
+    \3 dentigerous (den-TIJ-er-us): cystic sac containing a crown of tooth
+    \3 radicular (rah-DICK-you-lar): cyst located at the apex of a tooth root
+\end{outline}
+} % end of text
+
+%\end{minipage}
+\clearpage
+%%
+
+
+\subsection{Surgical Procedures Involved in Fracture Repair}
+
 
 \begin{minipage}[c]{0.45\linewidth}
 
@@ -733,12 +789,6 @@ Seldin periosteal elevator\\
 \end{outline}
 \end{minipage}
 
-
-\clearpage
-%%
-\clearpage
-%%
-\subsection{Surgical Procedures Involved in Fracture Repair}
 
 \clearpage
 %%
