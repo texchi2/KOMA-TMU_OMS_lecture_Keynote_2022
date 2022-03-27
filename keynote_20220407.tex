@@ -602,7 +602,8 @@ We, the oral and maxillofacial surgeons, are highly qualified professionals who 
 \end{center}
 \clearpage
 %%
-\noindent forceps (FOUR-seps)\\
+\noindent (phonetic spelling)\\
+forceps (FOUR-seps)\\
 scalpel handle and scalpel\\
 bone file\\%[3mm]
 %periosteal elevators\\%[3mm]
@@ -746,8 +747,8 @@ Seldin periosteal elevator\\
 
 % https://tex.stackexchange.com/questions/59101/will-it-ever-be-possible-to-use-wrapfig-with-an-enumerate-or-itemize-environment
 % wrapl or wrapr{vertical adjustment of text}{number of lines}{horizontal space needed for the image}{vertical adjustment of image}{IMAGE}{TEXT}
-% - is up, + is down
 
+% - is up text, + is down image
 \wrapr{-10mm}{7}{6cm}{+16mm}
 {\includegraphics[width=6cm]{torus.png}}
 {% text
@@ -759,8 +760,25 @@ Seldin periosteal elevator\\
 %\begin{outline}
     \2 exostosis (ecks-ahs-TOH-sis = bony outgrowth)
     \2 torus (TORE-us = rounded elevation)
-        \3 torus mandibularis (man-dib-u- LAIR-iss)
-        \3 torus palatinus (pal-ah-TEEN-us
+        \3 (A) torus mandibularis (man-dib-u- LAIR-iss)
+        \3 (B) torus palatinus (pal-ah-TEEN-us
+        
+\end{outline}
+} % end of text
+
+
+%\end{minipage}
+\clearpage
+%%
+
+% - is up text, + is down image
+\wrapr{-8mm}{7}{6cm}{+8mm}
+{% figure
+\includegraphics[width=5.5cm]{enucleation.jpeg}
+\includegraphics[width=5.5cm]{decompression.jpeg}
+} % end of figure
+{% text
+\begin{outline}
 \1 enucleation or decompression
     \2 cysts (SISTs = abnormal, closed-walled sac present in bone)
     \3 dentigerous (den-TIJ-er-us): cystic sac containing a crown of tooth
@@ -768,41 +786,40 @@ Seldin periosteal elevator\\
 \end{outline}
 } % end of text
 
-%\end{minipage}
 \clearpage
-%%
-
-
+%
 \subsection{Surgical Procedures Involved in Fracture Repair}
 
-
-\begin{minipage}[c]{0.45\linewidth}
-
+% - is up text, + is down image
+\wrapr{-8mm}{7}{6cm}{-1mm}
+{% figure
+\includegraphics[width=5.5cm]{Mabusa.png}
+\includegraphics[width=5.5cm]{reduction_mandible.jpeg}
+} % end of figure
+{% text
 \begin{outline}
-
+\1 treatment
+    \2 approaching, reduction, fixation, healing
+\1  manner of reduction
+    \2 closed fracture reduction
+    \2 open fracture reduction
 \end{outline}
-\end{minipage}
-\begin{minipage}[c]{0.5\linewidth}
-
-\begin{outline}
-
-\end{outline}
-\end{minipage}
-
+} % end of text
 
 \clearpage
-%%
+%
 \subsection{Procedures Involved in Maxillofacial Surgery}
 
 An example: Head and Neck Cancer
 
-Oral verrucous hyperplasia (\acrshort{ovh}) is a premalignant exophytic oral mucosal lesion with a predominantly verrucous or papillary surface; this lesion can subsequently transform into verrucous carcinoma (VC), a well-established warty variant of squamous cell carcinoma (SCC).
+% phonetic spelling for native English speakers:
+Oral verrucous hyperplasia (\acrshort{ovh}, vEr-uk-ohs hie-puh-plAY-ziuh) is a premalignant exophytic oral mucosal lesion with a predominantly verrucous or papillary surface; this lesion can subsequently transform into verrucous carcinoma (VC, vEr-uk-ohs kasi-NOUma), a well-established warty variant of squamous cell carcinoma (SCC, squa-mous sel kasi-NOUma).
 
-In \acrshort{ovh}, a predictive biomarker gives early alarm of its malignant transformation, which prevents unnecessary biopsy repeatedly.
+%In \acrshort{ovh}, a predictive biomarker gives early alarm of its malignant transformation, which prevents unnecessary biopsy repeatedly.
 
 %%%%%
 \thispagestyle{headings}
-\markright{Introduction\hfill Oral cancer is a major disease in Taiwan \hfill}
+%\markright{Introduction\hfill Oral cancer is a major disease in Taiwan \hfill}
 %\begin{figure}
 %\end{figure}
 
@@ -838,38 +855,20 @@ In \acrshort{ovh}, a predictive biomarker gives early alarm of its malignant tra
 
 %%%%%%%%%%%
 \thispagestyle{headings}
-\markright{Introduction\hfill Biomarker-guided HNSCC therapy \hfill}
+%\markright{Introduction\hfill Biomarker-guided HNSCC therapy \hfill}
 
 %The advantages of applying the TCGA data for cancer biomarker identification include:
 \begin{outline}
 \1  Treatment for HNSCC: \textcolor{green}{surgery}, radiotherapy, or systemic therapy (chemotherapy/targeted therapy)
 %There are many physical and social features of patients available for survival modeling. % ($X_1 ... X_n$)
     \2 \hl{metastasis}: from oral cavity (T*) $\longrightarrow$ neck lymph nodes (N*) $\longrightarrow$ the rest of body (M*) (e.g., lung, liver, bone)
-    \2 "Biomarkers" guide the treatment after surgery:
-%\1 many achievements and getting published, including \hl{Chi} et al., 2021~\autocite{Chi2021}.
-%    \2 diagnostic, \textcolor{red}{predictive} or \textcolor{green}{prognostic} biomarkers:
-        \3 pathological marker: \textcolor{red}{\acrfull{doi}} ($> 3 mm$), \textcolor{red}{positive surgical margin} ($< 2 mm$) or \textcolor{red}{positive lymph node (N+)} $\longrightarrow$ adjuvant radiation therapy %\hfill {\tiny (* DOI: \acrlong{doi})} is NOT tumor thickness
-        \3 molecular marker: over-expression of \textcolor{red}{EGFR} $\longrightarrow$ targeted inhibitor---cetuximab~\autocite{LeTourneau2007} \hfill {\tiny (covered by Taiwan's National Health Insurance since \hl{2009})}
-        % \cite{LeTourneau2007} Leblanc2020
-        
-        {\tiny (* cancer staging by TNM system: \textcolor{red}{T}umor size/depth, neck \textcolor{red}{N}odal metastasis, distant \textcolor{red}{M}etastasis; \\
-        TNM system: the Union for International Cancer Control, UICC, and
-        the American Joint Committee on Cancer, AJCC)}
+    
 \clearpage
 
 %    \2 "The results published~\autocite{Chi2021} and shown here are in part based upon data generated by the TCGA Research Network: \url{https://www.cancer.gov/tcga}."
-\1 50\% recurrent rate (on primary or neck) (all stages, global)~\autocite{Forastiere2001,Warnakulasuriya2009}
 
-\1 However, the \hl{survival} rate in Taiwan (2008 $\longrightarrow$ 2018):
-    \2 the one-year survival rate*: 79.56\% $\longrightarrow$ 81.62\% (all stages)
-    \2 the five-year survival rate*: 55.13\% $\longrightarrow$ 56.03\% (all stages) \\
-    {\tiny * \url{https://cris.hpa.gov.tw/pagepub/Home.aspx}}
 \1 We do our best ...
 \includegraphics[width=4cm]{stationary_survival_Artwork 2.jpg}
-
-
-\clearpage
-
 
 %%
 \1 We do
@@ -888,7 +887,7 @@ In \acrshort{ovh}, a predictive biomarker gives early alarm of its malignant tra
 
 %%%%%%%%%%%
 \thispagestyle{headings}
-\markright{Introduction\hfill We do HNSCC therapy \hfill}
+%\markright{Introduction\hfill We do HNSCC therapy \hfill}
 
 \includegraphics[width=2cm]{IMG_7174.jpg}
 \includegraphics[width=4cm]{IMG_6430.jpg} % PET/CT scan
@@ -911,7 +910,7 @@ In \acrshort{ovh}, a predictive biomarker gives early alarm of its malignant tra
 \clearpage
 %% f/u 2009 to 2021 our thinking process: biomarker, screening TCGA, deep learning and holistic
 \thispagestyle{headings}
-\markright{Introduction\hfill We do HNSCC research \hfill}
+%\markright{Introduction\hfill We do HNSCC research \hfill}
 
 \large Since surgery, we follow patients up closely, and they are always \hl{anxious} about their \hl{recurrence} (so do I).\vspace{5mm}
 
@@ -926,8 +925,40 @@ In \acrshort{ovh}, a predictive biomarker gives early alarm of its malignant tra
 \end{outline}
 \clearpage
 %%
+\begin{outline}
+\0 Other maxillofacial surgery
 
+\1 alveolar (al-VEE-oh-lar) ridge augmentation
+\1 orthognathic (ore-theg-NATH-ick) surgery
+    \2 genioplasty (JEE-nee-oh-plas-tee)
+\1 cleft lip/palate repair
+\end{outline}
+\includegraphics[width=4cm]{ridge_augmentation.png}
+\includegraphics[width=4cm]{genioplasty.png}
+\includegraphics[width=4cm]{cleft.png}
+
+\clearpage
+%%
 \subsection{Oral Surgery Procedures Involved with TMJ Dysfunction}
+
+
+% - is up text, + is down image
+\wrapr{-8mm}{7}{6cm}{-1mm}
+{% figure
+\includegraphics[width=5.5cm]{Mabusa.png}
+\includegraphics[width=5.5cm]{reduction_mandible.jpeg}
+} % end of figure
+{% text
+\begin{outline}
+\0 the temporomandibular joint (TMJ)
+\1 treatment
+    \2 approaching, reduction, fixation, healing
+\1  manner of reduction
+    \2 closed fracture reduction
+    \2 open fracture reduction
+\1 arthrotomy (ar-THRAH-toh-me = cutting into a joint)
+\end{outline}
+} % end of text
 
 \clearpage
 %%
