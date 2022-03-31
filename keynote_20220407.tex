@@ -478,6 +478,16 @@ parskip=half-, % Paragraphs separated by half a line
 
 \newcommand{\comm}[1]{} % for comment it out; https://tex.stackexchange.com/questions/17816/commenting-out-large-sections
 %----------------------------------------------------------------------------------------
+% for x \touchmarginincludegraphics
+% for touch margin
+% https://tex.stackexchange.com/questions/18166/how-to-have-a-figure-touch-the-edge-of-the-page
+\newcommand{\mydimright}{%
+  \dimexpr\paperwidth-1in-\hoffset-\oddsidemargin-
+  \columnwidth-\columnsep\relax}
+\newcommand{\mydimleft}{%
+  \dimexpr1in+\hoffset+\oddsidemargin+\columnwidth\relax}
+
+ 
 
 \begin{document}
 
@@ -488,8 +498,14 @@ parskip=half-, % Paragraphs separated by half a line
 
 % Title slide - you may have to tweak a few of the numbers if you wish to make changes to the layout
 \thispagestyle{empty} % No slide header and footer
-
-\includegraphics[width=9cm]{TMWH2_logo.png}
+%\begin{figure}[!h]
+% x \touchmarginincludegraphics[height=1cm]{TMWH2_logo}
+%\end{figure}
+\begin{flushleft}
+\makebox[\columnwidth][r]{%
+\includegraphics[height=1cm,width=\mydimleft]{TMWH2_logo}}
+\end{flushleft}
+%\includegraphics[width=8cm]{TMWH2_logo.png}
 %{TMU_SOH_Logo.png} 6.5cm
 %TMU_PTM_logo.png}
 \begin{tikzpicture}[remember picture,overlay] % Background box
